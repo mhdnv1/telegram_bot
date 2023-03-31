@@ -46,5 +46,5 @@ async def download(message: types.Message, state:FSMContext):
       await message.answer('Произашло ошибка попробуйте еще раз')
    await state.finish()
 
-if __name__ == '__main__':
+if __name__ == '__main__' :
  executor.start_polling(dp)
