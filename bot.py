@@ -13,6 +13,10 @@ dp = Dispatcher(bot , storage=MemoryStorage())
 async def start(message: types.Message):
     await message.answer(f'Здравствуйте {message.from_user.full_name}!\nВведите команду /help - чтобы узнать возможности бота')
 
+@dp.message_handler(commands='about')
+async def about(message: types.Message):
+    await message.answer(f'Здравствуйте мы команда IT-RUN')
+
 @dp.message_handler(commands='help')
 async def help(message: types.Message):
     await message.answer(f'Команды:\n/start\n/help - информация о боту\n/audio - конвертировать видео с ютуба  в аудио формате mp3')
